@@ -2,7 +2,7 @@ import threading
 import time
 import time
 import random
-import gpt3
+import inference
 from pynput.keyboard import Controller, Key
 import FoxDot
 
@@ -134,13 +134,9 @@ thread.start()
 
 while True:
 
-    completion = gpt3.complete(
-        prompt, 
-        stops=None, 
-        max_tokens=1050, 
-        temperature=0.9, 
-        engine='davinci',
-        max_completions=1)
+    completion = inference.generate_prompt(
+        prompt,   
+    )
 
     lines = completion.split('\n')
     for line in lines:

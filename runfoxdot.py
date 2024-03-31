@@ -12,8 +12,6 @@
 
 
 
-
-
 from __future__ import absolute_import, division, print_function
 
 from FoxDot import FoxDotCode, handle_stdin
